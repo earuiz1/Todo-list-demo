@@ -1,0 +1,130 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Fira sans', sans-serif;
+
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+}
+
+header{
+    padding: 4rem 1.30rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header h1{
+    font-size: 3rem;
+    font-weight: 400;
+    padding-bottom: 1rem;
+}
+
+#task-form{
+    display: flex;
+}
+
+#task-input{
+    flex: 1;
+    background-color: rgb(83, 81, 81);
+    border-radius: 10px;
+    height: 3.5rem;
+    padding: 1rem;
+    margin-right: 1rem;
+    color: white;
+
+}
+
+input, button{
+    border: none;
+    outline: none;
+    background: none;
+    appearance: none;
+}
+
+#task-input::placeholder{
+    color: rgba(255, 255, 255, 0.658);
+}
+
+#task-submit{
+    font-weight: bold;
+    background-image: linear-gradient(to right,green, rgb(31, 177, 91));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+
+}
+
+#task-submit:hover{
+    opacity: 0.8;
+}
+
+main{
+    flex: 1;
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.task-list{
+    padding: 0.8rem;
+}
+
+.task-list h2{
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+#tasks .task{
+    display: flex;
+    justify-content: space-between; 
+    background-color: rgb(83, 81, 81);
+    border-radius: 10px;
+    margin-right: 1rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+#tasks .task .content{
+    flex: 1;
+}
+
+#tasks .task .content .text{
+    color: rgba(255, 255, 255, 0.658);
+    font-size: 0.8rem;
+    width: 100%;
+}
+
+#tasks .task .actions{
+    display: flex;
+}
+
+#tasks .task .actions button{
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#tasks .task .actions button.Edit{
+    background-image: linear-gradient(to right,aqua, blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#tasks .task .actions button.Delete{
+    background-image: linear-gradient(to right,red, crimson);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+
+
