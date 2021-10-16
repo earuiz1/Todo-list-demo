@@ -18,6 +18,13 @@ window.addEventListener('load', () => {
     //Check if the submit button in the form was clicked
     form_submit.addEventListener('click', () =>{
 
+
+        //If the input is blank, show an error msg
+        if(!input.value){
+            alert("Please enter a task!");
+        }
+        else{
+
         //Create a <div class="tasks">
         const task_el = document.createElement("div");
         task_el.classList.add("task");
@@ -49,17 +56,20 @@ window.addEventListener('load', () => {
         //Append actions_el inside <div class="tasks>"
         task_el.appendChild(actions_el);
 
-
+        //Create an element of <button class="Edit">
         const button_edit_el = document.createElement("button");
         button_edit_el.classList.add("Edit");
         button_edit_el.innerHTML = 'Edit';
 
+        //Append button_edit_el inside <div class="actions>"
         actions_el.appendChild(button_edit_el);
 
+        //Create an element of <button class="Delete">
         const button_delete_el = document.createElement("button");
         button_delete_el.classList.add("Delete");
         button_delete_el.innerHTML = 'Delete';
 
+        //Append button_delete_el inside <div class="actions>"
         actions_el.appendChild(button_delete_el);
 
         //Check if the Edit button was clicked
@@ -86,10 +96,10 @@ window.addEventListener('load', () => {
             tasks_el.removeChild(task_el);
 
         })
-
-            
+    }
 
  })
+
 
 })
 
